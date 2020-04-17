@@ -12,5 +12,5 @@ const mapDispatch = {
     fetchStarWarsSuccess: fetchStarWarsSuccess(),
 }
 
-export const AppContainer = connect(mapState, mapDispatch)(App);
+export const AppContainer :any = connect(mapState, mapDispatch)(App);
 
