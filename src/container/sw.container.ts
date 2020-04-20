@@ -3,15 +3,15 @@ import App from '../components/App'
 import { InitialSwState } from '../models/sw.model';
 import { fetchStarWarsRequest, fetchStarWarsSuccess } from '../actions/sw.actions';
 
-const mapState = (state: InitialSwState) => ({
+export const mapSwState = (state: InitialSwState) => ({
     starWars : state.starWars
 })
 
-const mapDispatch = {
+export const mapSwDispatch = {
     fetchStarWarsRequest: fetchStarWarsRequest(),
     fetchStarWarsSuccess: fetchStarWarsSuccess(),
 }
 
-export const AppContainer = connect(mapState, mapDispatch);
+export const AppContainer = connect(mapSwState, mapSwDispatch);
 
 export type PropsFromRedux = ConnectedProps<typeof AppContainer>
