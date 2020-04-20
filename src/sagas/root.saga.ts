@@ -7,7 +7,7 @@ import { fetchCharacters } from './sw.saga';
 
 
 function* rootSaga() {
-    yield takeLatest({type: FETCH_STAR_WARS_REQUEST}, fetchCharacters);
+    yield takeLatest( FETCH_STAR_WARS_REQUEST, fetchCharacters);
 }
 
 export default rootSaga;

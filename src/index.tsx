@@ -7,6 +7,8 @@ import configureStore from './store/app.store';
 
 const store = configureStore();
 
+// @ts-ignore
+window.store = store;
 
 ReactDOM.render(
     <Provider store={store}>
