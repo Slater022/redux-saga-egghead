@@ -1,4 +1,4 @@
-import { connect } from 'react-redux'
+import { connect, ConnectedProps } from 'react-redux'
 import App from '../components/App'
 import { InitialSwState } from '../models/sw.model';
 import { fetchStarWarsRequest, fetchStarWarsSuccess } from '../actions/sw.actions';
@@ -12,5 +12,6 @@ const mapDispatch = {
     fetchStarWarsSuccess: fetchStarWarsSuccess(),
 }
 
-export const AppContainer :any = connect(mapState, mapDispatch)(App);
+export const AppContainer = connect(mapState, mapDispatch);
 
+export type PropsFromRedux = ConnectedProps<typeof AppContainer>
