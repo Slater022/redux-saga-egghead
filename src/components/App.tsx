@@ -32,7 +32,7 @@ class App extends Component<PropsFromRedux> {
             <div>
                 <h1>Redux Saga</h1>
                 <div>
-                    {this.props.starWars.map((person, i) => <h4 key={i}>{person.name}</h4>)}
+                    {this.props.starWars.map((person : CharacterModel, i) => <h4 key={i}>{person.name}</h4>)}
                 </div>
                 <button onClick={() => this.props.fetchStarWarsRequest}>Load More</button>
             </div>
