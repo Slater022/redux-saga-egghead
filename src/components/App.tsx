@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.scss';
 import { mapSwDispatch, mapSwState, PropsFromRedux } from '../container/sw.container';
 
+//*
 export const App = ({ fetchStarWarsRequest, starWars = [] }: PropsFromRedux) => (
     <div>
         <h1>Redux Saga</h1>
@@ -12,6 +13,8 @@ export const App = ({ fetchStarWarsRequest, starWars = [] }: PropsFromRedux) => 
         <button onClick={fetchStarWarsRequest}>Load More</button>
     </div>
 );
+//*/
+
 
 export default connect(mapSwState, mapSwDispatch)(App);
 
