@@ -1,15 +1,15 @@
 import { connect, ConnectedProps } from 'react-redux'
 import App from '../components/App'
-import { InitialSwState } from '../models/sw.model';
+import { RootState } from '../reducers/_root.reducer';
 import { fetchStarWarsRequest, fetchStarWarsSuccess } from '../actions/sw.actions';
 
-export const mapSwState = (state: InitialSwState) => ({
-    starWars : state.starWars
+export const mapSwState = (state: RootState) => ({
+    starWars : state.swReducer.starWars
 })
 
 export const mapSwDispatch = {
-    fetchStarWarsRequest: fetchStarWarsRequest(),
-    fetchStarWarsSuccess: fetchStarWarsSuccess(),
+    fetchStarWarsRequest: () => fetchStarWarsRequest(),
+    fetchStarWarsSuccess: () => fetchStarWarsSuccess(),
 }
 
 export const AppContainer = connect(mapSwState, mapSwDispatch);

@@ -3,7 +3,7 @@ import { FETCH_STAR_WARS_SUCCESS, SwActionTypes } from '../types/sw.types';
 import { CharactersService } from '../services/characters.service';
 
 
-export function* fetchCharacters() {
+export function* fetchCharacters(action: SwActionTypes) {
     try {
         const character = yield call(CharactersService.fetchCharactersApi);
         yield put({type: FETCH_STAR_WARS_SUCCESS, payload: character});

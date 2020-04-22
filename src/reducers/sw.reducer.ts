@@ -18,7 +18,7 @@ const handleStarWarsFetchRequest = (state: InitialSwState, action: SwActionTypes
 const handleStarWarsFetchSuccess = (state: InitialSwState, action: SwActionTypes) => {
     return {
         ...state,
-        starWars:  action.payload
+        starWars: action.payload
     }
 }
 
