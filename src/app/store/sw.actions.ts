@@ -1,5 +1,5 @@
-import { FETCH_STAR_WARS_REQUEST, FETCH_STAR_WARS_SUCCESS, SwActionTypes } from '../types/sw.types';
-import { CharacterModel } from '../models/character.model';
+import { FETCH_STAR_WARS_REQUEST, FETCH_STAR_WARS_SUCCESS, SwActionTypes } from './sw.types';
+
 
 export function fetchStarWarsRequest (): SwActionTypes {
     return {
@@ -14,5 +14,4 @@ export function fetchStarWarsSuccess (payload : []): SwActionTypes {
         payload: payload
     }
 }
-
 

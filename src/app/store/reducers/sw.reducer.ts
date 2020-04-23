@@ -1,9 +1,9 @@
-import * as swFetch from '../types/sw.types'
-import { InitialSwState } from '../models/sw.model';
-import { FETCH_STAR_WARS_REQUEST, FETCH_STAR_WARS_SUCCESS, SwActionTypes } from '../types/sw.types';
+import * as swFetch from '../sw.types'
+import { InitialSwState } from '../../model/sw.model';
+import { FETCH_STAR_WARS_REQUEST, FETCH_STAR_WARS_SUCCESS, SwActionTypes } from '../sw.types';
 
 const initialState: InitialSwState = {
-    starWars: []
+    starwars: []
 }
 
 // Extract for better readability
@@ -11,14 +11,14 @@ const handleStarWarsFetchRequest = (state: InitialSwState, action: SwActionTypes
     // TODO : Correct one
     return {
         ...state,
-        starWars: action.payload
+        starwars: action.payload
     }
 }
 
 const handleStarWarsFetchSuccess = (state: InitialSwState, action: SwActionTypes) => {
     return {
         ...state,
-        starWars: action.payload
+        starwars: action.payload
     }
 }
 

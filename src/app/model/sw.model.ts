@@ -1,11 +1,9 @@
-import { CharacterModel } from './character.model';
-
 export interface InitialSwState {
-    starWars: CharacterModel[]
+    starwars: []
 }
 
 export class InitialSwState implements InitialSwState{
     constructor() {
-        this.starWars = [];
+        this.starwars = [];
     }
 }
