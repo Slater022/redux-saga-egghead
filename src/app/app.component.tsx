@@ -8,7 +8,7 @@ function AppComponent() {
     return (
         <div className="App">
             <header className="App-header">
-                <StarwarsComponent />
+                App Component
             </header>
         </div>
     );
